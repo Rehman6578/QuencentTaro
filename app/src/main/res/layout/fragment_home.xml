@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:background="@color/background"
+    tools:context=".Bottom_nav.HomeFragment">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentTop="true"
+        android:weightSum="5">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_search_24"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Books"
+            android:textSize="26dp"
+            android:textStyle="bold"
+            android:textColor="@color/grey"
+            android:layout_weight="3"
+            android:textAlignment="center"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_settings_24"
+            android:layout_weight="1"
+
+            android:layout_gravity="center_vertical"
+            />
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/gradient_color"
+
+        />
+
+    <TextView
+        android:id="@+id/popular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Popular"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/grey"
+        android:layout_below="@+id/view"
+        android:layout_marginTop="16dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/popular_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/popular"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/categories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Categories"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/grey"
+        android:layout_below="@id/popular_recycler"
+        android:layout_marginTop="16dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/categories_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/categories"
+        android:layout_marginTop="10dp"
+        />
+
+
+
+
+</RelativeLayout>
